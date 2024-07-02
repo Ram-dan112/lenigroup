@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS GROUP</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+    background-color: #ff9cde;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Menggunakan Flexbox untuk posisi navbar */
+    justify-content: center; /* Memposisikan navbar di tengah-tengah */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #000000;
+        }
+
+        .hero {
+    /* Remove background-image property here */
+    background-size: cover;
+    background-position: center;
+    border-image-source: #fff;
+    text-align: center;
+    padding: 200px 0;
+    margin-top: 80px;
+
+    /* Animasi slide */
+    animation: slideBackground 30s infinite linear;
+}
+
+@keyframes slideBackground {
+    0% {
+        background-image: url('https://scontent.fplm3-1.fna.fbcdn.net/v/t39.30808-6/448763480_1840345693117675_9003396409764472594_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHC__S2kogE-YAXl6vSX7yj494GIMhWhKzj3gYgyFaErICZKOZbkildIc_b8FZmYz-KOEs2g0BHGdur0_cWlvJA&_nc_ohc=ylEAWLmxm4YQ7kNvgESR5Ir&_nc_zt=23&_nc_ht=scontent.fplm3-1.fna&oh=00_AYDBf6c_r1uXkDsoEelYIdwR4tX4QeOZbUWw2XZuTwti-A&oe=6685BC44');
+    }
+    25% {
+        background-image: url('https://scontent.fplm3-2.fna.fbcdn.net/v/t39.30808-6/448816206_1840345733117671_1689256241135174466_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHLoPUryg34UOqKX2dM8DRb4Cptn0YXwW_gKm2fRhfBb4eHgOXafRB3BVf9B5XWpk7iO_m4vVeOxu5DQrSjUic_&_nc_ohc=ksoYQnl7AfEQ7kNvgETUDkV&_nc_zt=23&_nc_ht=scontent.fplm3-2.fna&oh=00_AYAklTGHOFTW9wLt3GLX6qpwFWdp9fRuk6sAOh01KyMvxg&oe=6685BEE9');
+    }
+    50% {
+        background-image: url('https://scontent.fplm3-2.fna.fbcdn.net/v/t39.30808-6/449178370_1840345569784354_1622558766494691606_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeF_MP4FPSLJ4Ljsg-9hu2eX-5oBG50A2Ur7mgEbnQDZStorltY7Z_ybmEVRUUuwDevZeT0CNA5OdtukrTgG2Px9&_nc_ohc=Wq-f_cFs_iYQ7kNvgF-7DSv&_nc_zt=23&_nc_ht=scontent.fplm3-2.fna&oh=00_AYAx1NKvCsC_bQEvWl4FpuA3F6cKTiBnLXsQfgpz3ekKDw&oe=66859CE9');
+    }
+    75% {
+        background-image: url('https://scontent.fplm3-2.fna.fbcdn.net/v/t39.30808-6/448808804_1840345676451010_2645578354052311786_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHPytk5AqKsfcKTMsB7tUA0g_B8NeTkAE-D8Hw15OQAT16NlnwgdUkNZqG7V5t3JnXaSGrw7D18d_vl7op-m7oa&_nc_ohc=d21RYVgyj00Q7kNvgFgQc5P&_nc_zt=23&_nc_ht=scontent.fplm3-2.fna&oh=00_AYAZmnujbCAmXx-aDAcgfKKVf3xWqXn4eCXiXYAGJuJy0w&oe=6685C4CE');background-position: right;
+    }
+    100% {
+        background-image: url('https://scontent.fplm3-2.fna.fbcdn.net/v/t39.30808-6/449084836_1840345943117650_5697888810516056191_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeE_DwLn-cyDrX56Pt97UlO4RfkS4CwJ1N5F-RLgLAnU3ikYsya25Kx4ePss5nBxJpcEb5ijTnX_TdbSVdIzwnMQ&_nc_ohc=Fwhl-7sv5NAQ7kNvgG2_p3j&_nc_zt=23&_nc_ht=scontent.fplm3-2.fna&oh=00_AYD_ZEmD5q0SKPXEJs3Al7vkq_tEycCJ3H3xCZrtKNESqg&oe=6685A466');
+    }
+}
+
+.hero {
+    animation: slideBackground 30s linear infinite; /* Ubah durasi animasi sesuai keinginan */
+}
+
+
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #555;
+        }
+
+        .about {
+            background-color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        
+
+        .contact {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .contact textarea {
+            height: 150px;
+        }
+
+        .contact .btn {
+            background-color: #fff;
+            color: #ff95c6;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .contact .btn:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color: #ff95c6;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            clear: both;
+            margin-top: 40px;
+        }
+        
+        
+    </style>
+     <script>
+        function sendWhatsAppMessage() {
+            var nama = encodeURIComponent(document.getElementById('nama').value);
+            var pesan = encodeURIComponent(document.getElementById('pesan').value);
+
+            var nomorWhatsApp = '6282149849247'; // Ganti dengan nomor WhatsApp Anda
+            var url = 'https://api.whatsapp.com/send?phone=' + nomorWhatsApp + '&text=Nama:%20' + nama + '%0AEmail:%20' + email + '%0APesan:%20' + pesan;
+
+            window.open(url, '_blank');
+        }
+    </script>
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\MANCUY\Desktop\LATIHAN\BERANDA\index.html">Menu</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    
+                    
+                </ul>
+            </nav>
+        </div>
+       
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>SELAMAT DATANG DI LS GROUP</h2>
+                <p>PERCAYAKAN DAN KABULKAN KEINGINAN KAMU DI KAMI</p>
+                <a href="C:\Users\MANCUY\Desktop\LATIHAN\BERANDA\index.html" class="btn">BERANDA</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>LS GROUP</h2>
+            <p>Ls Group adalah sebuah nama toko di daerah Sumber Baru Kecamatan Mesuji Raya,yang 
+                di rintis dari tahun 2019 sampai saat ini,toko ini berdiri di bangunan rumah,toko kami bergerak di bidang percetakan,online shop
+                ,Celullar dan Foto Studio,dengan melayani senang hati dan selalu mengutamakan 3S apabila kamu 
+                datang berbelanja di toko kami
+            </p>
+            
+        </div>
+    </section>
+
+    <section>
+        <h1>Lokasi : C1 Sumber Baru Blok F Kecamatan Mesuji Raya</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1719762273787!6m8!1m7!1sSYYtlk36eBnZOrSls5yymA!2m2!1d-3.83743482373718!2d104.9930017569297!3f45.154524975986135!4f-3.3578086260291116!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>
+
+    <section class="contact">
+        <div class="container">
+            <h1>HUBUNGI KAMI</h1>
+            <!-- Ganti dengan link WhatsApp -->
+            <a href="https://wa.me/6282149849247" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png" alt="WhatsApp Logo" width="20" height="20" style="vertical-align: middle;">
+                 Via WhatsApp
+            </a>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portofolio Toko. All rights reserved.</p>
+        </div>
+        <div class="container">
+            <div class="social-icons">
+                <!-- Ganti dengan logo sosial media dan link yang sesuai -->
+                <a href="https://web.facebook.com/lenyseptyana09" target="_blank"><img src="https://cdn.icon-icons.com/icons2/2566/PNG/512/facebook_icon_153518.png"  width="30" height="30"></a>
+                <a href="https://www.tiktok.com/@leniseptiana24?lang=id-ID" target="_blank"><img src="https://www.svgrepo.com/show/333611/tiktok.svg"  width="30" height="30"></a>
+                <a href="https://www.instagram.com/leniiiiiii24/" target="_blank"><img src="https://www.svgrepo.com/show/364604/instagram-logo-fill.svg"  width="30" height="30"></a>
+                <!-- Dan lain-lain -->
+            </div>
+    </footer>
+    
+    
+     </body>
+</html>
